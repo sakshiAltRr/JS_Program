@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="main">the para</p>
+    <script>
+        var a=4
+        let x=9;
+        x=0;  //can assign x with new value
+        document.getElementById("main").innerHTML=x;
+        const y=0;// can't assign y with new value
+        
+        document.getElementById("main").innerHTML=a+" ,"+y+" and "+x;
+    </script>
+</body>
+</html>
