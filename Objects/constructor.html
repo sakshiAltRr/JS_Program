@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(first,last,age,eye){
+            this.firstName=first;
+            this.lastName=last;
+            this.age=age;
+            this.eyecolor=eye;
+            this.nationality="indian";
+        }
+        const mySister=new Person("Sayali","Bhujbal",28,"brown");
+        Person.prototype.changeNat=function(nationality){
+            this.nationality=nationality;
+        }
+        mySister.changeNat("English");
+        let text="";
+        for(let [key,value] of Object.entries(mySister)){
+                text += key +" : "+value+"<br>"; 
+        }
+        document.write(text);
+        document.write("<br>");
+
+
+       
+
+       
+
+        const myself=new Person("Sakshi","Bhujbal",23,"brown");
+        let text1="";
+        for(let [key,value] of Object.entries(myself)){
+                text1 += key +" : "+value+"<br>"; 
+        }
+        myself.friend="Shreya";
+        myself.changeName=function(name){
+            this.first=name;// to change values of object
+        }
+        myself.changeName("Mau")
+        document.write(text1);
+        document.write("<br>");
+        document.write(myself.first);// to print changed value
+        document.write("<br>")
+
+        document.write(myself.friend);
+    </script>
+</body>
+</html>

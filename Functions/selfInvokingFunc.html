@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Function expressions can be made "self-invoking".
+
+A self-invoking expression is invoked (started) automatically, without being called.
+
+Function expressions will execute automatically if the expression is followed by ().
+
+You cannot self-invoke a function declaration. -->
+<body>
+    <p id="main">This is Para</p>
+    <script>
+            (function (){
+                document.getElementById("main").innerHTML="Hello,I called myself";
+            })();
+    </script>
+</body>
+</html>
