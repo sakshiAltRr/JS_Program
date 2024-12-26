@@ -7,10 +7,88 @@
 </head>
 <body>
     <script>
-        let car={type:"Sedan",model:"BMW",color:"Black"};
-        document.writeln("The color of car is :"+car.color+"<br>");
+        const car={type:"Sedan",model:"BMW",color:"Black"};//object literal
+        car.length="8ft";
+        document.writeln("The color of car is :"+car.color.toUpperCase()+"<br>");
         document.writeln("The type of car is :"+car.type+"<br>");
         document.writeln("The model of car is :"+car.model+"<br>");
+        document.writeln("The length of car is :"+car.length+"<br>");
+        delete car.length;
+        document.writeln("The length of car is :"+car.length+"<br>");
+        let temp="";
+        for(let x in car){
+            temp+=car[x]+" ";
+        }
+        document.write("The elements are: "+temp);//displaying the obj elements by loop
+        document.writeln("<br>")
+
+        const person={};//empty js object
+        person.fName="Sakshi";//property=value
+        person.lName="Bhujbal";
+        person.age=23;
+        document.writeln("The age of person is:"+person.age+"<br>");
+        document.writeln("<br>")
+
+        const bike=new Object();
+        bike.name="IQube";
+        bike.type="Electric";
+        bike.color="white";
+        document.writeln("The name of bike is:"+(bike.name).toUpperCase()+"<br>");  
+        document.writeln("<br>")
+       /*objectName.propertyName
+        objectName["propertyName"]*/
+
+        const person1 = {
+    fName: "Akash",
+    lName: "Bhujbal",
+    age: 18,
+    fullname: function() {
+        return this.fName + " " + this.lName;
+    }//metgod that is function stored as properties
+};
+
+document.write("The name of person1 is " + person1.fullname());  // Correct way to call the function
+document.writeln("<br>")
+document.writeln("<br>")
+const person2={
+    name:"Shreya",
+    age: 22,
+    friend:{
+            name:"Sakshi"
+    }
+    
+}
+document.write(person2.friend.name);//displaying object properties
+document.writeln("<br>")
+document.writeln("<br>")
+
+const car1={
+    name:"audi",
+    type:"sedan",
+    color:"white"
+};
+
+    let text=Object.values(car1);
+    document.write(text+"<br>");//displays data as array
+
+    let text1="";
+    for(let[c,value] of Object.entries(car1)){
+        text1 += c+" : "+value+ "<br>";
+    }
+    document.write("The object elements are: "+"<br>")
+    document.write(text1);//display data in key value pair
+
+    document.writeln("<br>")
+    document.writeln("<br>")
+
+    const person3={
+        name:"Harsh",
+        age:24,
+        city:"New York"
+    }
+    let str=JSON.stringify(person3);
+    document.write(str);
+
     </script>
 </body>
 </html>
