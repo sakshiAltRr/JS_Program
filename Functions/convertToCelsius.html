@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunc(fahrenheit){
+            return (5/9) * (fahrenheit-32);
+        }
+
+        let celsius=myFunc(312);
+        document.write("The celsius value is: "+celsius+"<br>");//returns value as it refers to function result
+        let celsius1=myFunc();
+        document.write("The value in celsius is: "+celsius1 + "<br>");//returns Nan
+        let celsius2=myFunc;
+        document.write(celsius2+"<br>");//returns function as it refers to function object
+        let text="the temperature is: " + myFunc(77);
+        document.write(text);
+    </script>
+</body>
+</html>
