@@ -12,6 +12,7 @@
     <p id="main2"></p>
     <script>
         function myFunc(){
+            //To secure a proper result, variables should be converted to the proper type before comparison
             let age=Number(document.getElementById("main").value);
             let voteable;
             if(isNaN(age)){

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="main"></p>
+    <script>
+        let name=null;
+        let text="Missing";
+
+        let result=name??text;
+        //The ?? operator returns the first argument if it is not nullish (null or undefined).
+
+//Otherwise it returns the second argument.
+        document.getElementById("main").innerHTML="The text is "+result;
+    </script>
+</body>
+</html>
