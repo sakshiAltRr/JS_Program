@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //The JavaScript for of statement loops through the values of an iterable object.
+
+//It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more
+/*for (variable of iterable) {
+  // code block to be executed
+}
+variable - For every iteration the value of the next property is assigned to the variable. Variable can be declared with const, let, or var.
+
+iterable - An object that has iterable properties.*/
+
+const arr=["BMW","Mercedes","Defender","Thar"];
+let text="";
+for(let x of arr){
+    text += x +" ";
+}
+document.write(text);
+
+document.write("<br>");
+const str="JavaScript";
+let txt="";
+for (let x of str){
+    txt += x +" ";
+}
+document.write(txt);
+    </script>
+</body>
+</html>
