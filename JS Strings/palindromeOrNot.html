@@ -7,15 +7,13 @@
 </head>
 <body>
     <script>
-        let str="raccar";
-        let text=str.split("").reverse().join("");
-       
-        
-        if(text === str){
-            document.write("Palindrome");
-        }else{
-            document.write("Not a palindrome");
+        function rev(str){
+            let str1=str.split("").reverse().join("");
+            return str==str1;
         }
+        document.write(rev("racecar")+"<br>");
+        
+        document.write(rev("hello"));
     </script>
 </body>
 </html>
