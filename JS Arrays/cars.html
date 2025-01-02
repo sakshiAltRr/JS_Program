@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cars=["Volvo","Thar","Mercedes"];
+        document.write(cars[0]);
+        document.write("<br>")
+        for(let i in cars){
+            document.write(cars[i]+" ");
+        }
+        document.write("<br>")
+        document.write("The length od cars array is: "+cars.length);
+        document.write("<br>")
+        document.write("The sorted array is: "+cars.sort().toString());
+        document.write("<br>")
+        document.write("Accessing array last element: "+cars[cars.length-1]);
+        document.write("<br>")
+
+        const fruits=["Banana","Apple","Guava","Mango"];
+        let flen=fruits.length;
+        let text="<ul>";
+            for(let i=0;i<flen;i++){
+                text+= "<li>" +fruits[i]+ "</li>";
+            }
+            text+= "<ul>";
+                document.write(text);
+                
+                
+    </script>
+</body>
+</html>

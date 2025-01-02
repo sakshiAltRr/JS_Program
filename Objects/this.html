@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="this.style.display='none'">Click to remove me!</button><!--this refers to button-->
+    <br>
+    <script>
+        const Person={
+            firstName:"Sakshi",
+            lastName:"Bhujbal",
+            age:23,
+            fullname:function(city,country){
+                return this.firstName +" "+this.lastName +" , "+city+","+country; //this refers to person object
+            }
+
+        };
+        document.write(Person.fullname());
+
+        document.write("<br>")
+        const p1={
+            firstName:"Mau",
+            lastName:"Bhujbal",
+            fullName:function(){
+                return this; //in browser window refers to window object
+            }
+        }
+        document.write(p1.fullName());
+        document.write("<br>");
+        function myFunc(){
+                return this;
+        }
+        document.write(myFunc());
+        document.write("<br>")
+        document.write(Person.fullname.call(p1));//call without arguments
+        document.write("<br>")
+        document.write(Person.fullname.call(p1,"Oslo","Norway"));//call with arguments
+        document.write("<br>")
+        document.write(Person.fullname.bind(p1));
+        //Here, .bind(p1) returns a new function where the this context is set to p1. However, you're directly writing the function itself to the document, not calling it. That's why you don't see the expected result of "Mau Bhujbal". You are printing the function definition itself.
+        document.write("<br>");
+        document.write(Person.fullname.bind(p1)());//You should invoke the function returned by .bind() like this:
+
+    </script>
+</body>
+</html>

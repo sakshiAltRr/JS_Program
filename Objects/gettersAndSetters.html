@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            name:"Sakshi",
+            lname:"Bhujbal",
+            language:"en",
+            _eyecolor:"",
+            get lang(){
+                return this.language.toUpperCase();
+            },
+            set eyecolor(color){
+                     this._eyecolor=color;
+            },
+            get eyecolor(){
+                return this._eyecolor;
+            }
+        }
+        person.eyecolor="Brown";
+        document.write(person.lang);
+        document.write("<br>");
+        document.write(person.eyecolor);
+    </script>
+</body>
+</html>

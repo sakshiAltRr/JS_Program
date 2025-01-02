@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dynamic content</h2>
+    <button id="btn">Add Element</button>
+    <script>
+        document.querySelector("#btn").addEventListener("click",()=>{
+            let newDiv=document.createElement("div");
+            newDiv.textContent="New element added";
+            newDiv.style.margin="10px 0";
+            newDiv.style.background="pink";
+            document.body.appendChild(newDiv);
+        });
+    </script>
+</body>
+</html>

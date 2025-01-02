@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p1={
+            fname:"Sakshi",
+            lname:"Bhujbal",
+            age:23,
+            eyecolor:"Brown"
+        }
+        const p2={fname:"Shreya",lname:"Ghadage"}
+        Object.assign(p1,p2);
+        let text=Object.entries(p1);
+        document.write(text);
+
+        document.write("<br>");
+        const fruits={Banana:200,apple:400,mango:600};
+        text="";
+        for(let [fruit,value] of Object.entries(fruits)){
+            text+= fruit +":" +value+" <br>";
+        }
+        document.write(text);
+        document.write("<br>");
+        const fruit=[["banana",200],
+    ["apple",400],["mango",600]];
+        let myfruit=Object.fromEntries(fruit);
+        document.write(myfruit.mango);
+    </script>
+</body>
+</html>
