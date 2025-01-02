@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class OOPS{
+            constructor(name){
+                this.name=name;
+            }
+
+            get langName(){
+                return this.name;
+            }
+            set langName(x){
+                this.name=x;
+            }
+            hello(){
+                document.write(`Hello ${this.name}`);
+            }
+        }
+
+        let obj =new OOPS("Javascript");
+        document.write(obj.name);
+
+        document.write("<br>")
+        let obj1= new OOPS("MERN");
+        document.write(obj1.name);
+    </script>
+</body>
+</html>

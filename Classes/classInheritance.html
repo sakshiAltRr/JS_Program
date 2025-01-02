@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Animal{
+        constructor(AnimalName){
+            this.AnimalName=AnimalName;
+        }
+        bark(){
+            return `${this.AnimalName} barks`;
+        }
+    }
+
+    class Dog extends Animal{
+        constructor(name,color){
+            this.name=name;
+            this.color=color;
+        }
+    }
+</script>
+</body>
+</html>

@@ -15,11 +15,16 @@
             toString(){
                 return `First name: ${this.firstname}, Last Name: ${this.lastname}`;
             }
+            Speak(){
+                return (`${this.firstname} speaks`);
+            }
         }
         let obj1=new FirstClass("Sakshi","Bhujbal");
         document.write(obj1);
         document.write("<br>")
         document.write(obj1.firstname+" "+obj1.lastname);
+        document.write("<br>")
+        document.write(obj1.Speak());
         // return "[object Object]"without tostring
 
 //This is because, in JavaScript, every object inherits from Object.prototype, which has a method toString() that returns "[object Object]" unless it is explicitly overridden.
