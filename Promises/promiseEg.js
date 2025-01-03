@@ -22,3 +22,16 @@ function(error){
 myDisplayer(error);
 }
 );
+
+const p1=new Promise(function(resolve,reject){
+    setTimeout(()=>{
+        console.log("Hello");
+        resolve();
+        reject();
+    },1000);
+}).then(function(){
+    console.log("Promise resolved");
+},function(){
+    console.log("Promise rejected")
+}
+)
