@@ -11,13 +11,14 @@ let arr=[1,3,2,9,5,9,9,8];
             if(j-i+1 < k){
                 j++;
         }
-            else if(j-i+1 == k){
-                
+            else if(j-i+1 == k && j != i){
+               
                 mx=Math.max(mx,sum);
                 sum -= arr[i];
                 i++;
                 j++;
-            }
+                }
+            
         }
         return (mx);
     }
