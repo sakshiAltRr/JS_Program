@@ -6,20 +6,23 @@ let arr=[1,3,2,9,5,9,9,8];
         function myFunc(){
         let i=0,j=0;
         let sum=0, mx=Number.MIN_VALUE;
+        let uniqueElements=new Set();
         while(j<size ){
+            if(!uniqueElements.has(arr[j])){
+            uniqueElements.add(arr[j])
             sum += arr[j];
-            if(j-i+1 < k){
+            
                 j++;
-        }
-            else if(j-i+1 == k && j != i){
-               
-                mx=Math.max(mx,sum);
-                sum -= arr[i];
-                i++;
-                j++;
-                }
+         mx=Math.max(mx,sum);
             
         }
+            else {
+            uniqueElements.delete(arr[i])
+            sum -= arr[i];
+            i++;
+            }
+        }
+        
         return (mx);
     }
     console.log("the max sum subarray is: "+myFunc())
