@@ -18,10 +18,17 @@
 
     class Dog extends Animal{
         constructor(AnimalName,color){
-            super()
+            super(AnimalName)
             this.color=color;
         }
     }
+    let obj1=new Animal("Dog");
+    let obj2= new Dog("Dog","White");
+    document.write(obj2.color);
+    document.write("<br>")
+    document.write(obj1.bark());
+   
+   
 </script>
 </body>
 </html>
